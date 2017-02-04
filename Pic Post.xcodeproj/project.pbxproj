@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3770CE145687FBB1A965F276 /* Pods_Pic_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941ED197178717C04C2E1FA8 /* Pods_Pic_Post.framework */; };
 		EAC3D8691E4690B300E250AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D8681E4690B300E250AD /* AppDelegate.swift */; };
-		EAC3D86B1E4690B300E250AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D86A1E4690B300E250AD /* ViewController.swift */; };
+		EAC3D86B1E4690B300E250AD /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D86A1E4690B300E250AD /* SignInVC.swift */; };
 		EAC3D86E1E4690B300E250AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D86C1E4690B300E250AD /* Main.storyboard */; };
 		EAC3D8701E4690B300E250AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D86F1E4690B300E250AD /* Assets.xcassets */; };
 		EAC3D8731E4690B300E250AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D8711E4690B300E250AD /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		B19F4D5FA0EC49F0ECC555B8 /* Pods-Pic Post.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Post.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pic Post/Pods-Pic Post.release.xcconfig"; sourceTree = "<group>"; };
 		EAC3D8651E4690B300E250AD /* Pic Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic Post.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC3D8681E4690B300E250AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAC3D86A1E4690B300E250AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAC3D86A1E4690B300E250AD /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		EAC3D86D1E4690B300E250AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAC3D86F1E4690B300E250AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAC3D8721E4690B300E250AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,15 +80,39 @@
 		EAC3D8671E4690B300E250AD /* Pic Post */ = {
 			isa = PBXGroup;
 			children = (
+				EAC3D87C1E4694F500E250AD /* Model */,
+				EAC3D87E1E46950300E250AD /* Controller */,
+				EAC3D87D1E4694FB00E250AD /* View */,
 				EAC3D87A1E4691DA00E250AD /* GoogleService-Info.plist */,
 				EAC3D8681E4690B300E250AD /* AppDelegate.swift */,
-				EAC3D86A1E4690B300E250AD /* ViewController.swift */,
 				EAC3D86C1E4690B300E250AD /* Main.storyboard */,
 				EAC3D86F1E4690B300E250AD /* Assets.xcassets */,
 				EAC3D8711E4690B300E250AD /* LaunchScreen.storyboard */,
 				EAC3D8741E4690B300E250AD /* Info.plist */,
 			);
 			path = "Pic Post";
+			sourceTree = "<group>";
+		};
+		EAC3D87C1E4694F500E250AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EAC3D87D1E4694FB00E250AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EAC3D87E1E46950300E250AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAC3D86A1E4690B300E250AD /* SignInVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC3D86B1E4690B300E250AD /* ViewController.swift in Sources */,
+				EAC3D86B1E4690B300E250AD /* SignInVC.swift in Sources */,
 				EAC3D8691E4690B300E250AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +407,7 @@
 				EAC3D8791E4690B300E250AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
