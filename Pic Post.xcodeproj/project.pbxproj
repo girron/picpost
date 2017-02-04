@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3770CE145687FBB1A965F276 /* Pods_Pic_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941ED197178717C04C2E1FA8 /* Pods_Pic_Post.framework */; };
 		EAC3D8691E4690B300E250AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D8681E4690B300E250AD /* AppDelegate.swift */; };
 		EAC3D86B1E4690B300E250AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D86A1E4690B300E250AD /* ViewController.swift */; };
 		EAC3D86E1E4690B300E250AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D86C1E4690B300E250AD /* Main.storyboard */; };
 		EAC3D8701E4690B300E250AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D86F1E4690B300E250AD /* Assets.xcassets */; };
 		EAC3D8731E4690B300E250AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D8711E4690B300E250AD /* LaunchScreen.storyboard */; };
+		EAC3D87B1E4691DA00E250AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D87A1E4691DA00E250AD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93E0249BB0C581B046E2D76C /* Pods-Pic Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Post.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pic Post/Pods-Pic Post.debug.xcconfig"; sourceTree = "<group>"; };
+		941ED197178717C04C2E1FA8 /* Pods_Pic_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pic_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B19F4D5FA0EC49F0ECC555B8 /* Pods-Pic Post.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pic Post.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pic Post/Pods-Pic Post.release.xcconfig"; sourceTree = "<group>"; };
 		EAC3D8651E4690B300E250AD /* Pic Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic Post.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC3D8681E4690B300E250AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC3D86A1E4690B300E250AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		EAC3D86F1E4690B300E250AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAC3D8721E4690B300E250AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAC3D8741E4690B300E250AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC3D87A1E4691DA00E250AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3770CE145687FBB1A965F276 /* Pods_Pic_Post.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FDFDD5EC369BACD099853D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				941ED197178717C04C2E1FA8 /* Pods_Pic_Post.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40D2BCC01A62F70368E227B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93E0249BB0C581B046E2D76C /* Pods-Pic Post.debug.xcconfig */,
+				B19F4D5FA0EC49F0ECC555B8 /* Pods-Pic Post.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EAC3D85C1E4690B300E250AD = {
 			isa = PBXGroup;
 			children = (
 				EAC3D8671E4690B300E250AD /* Pic Post */,
 				EAC3D8661E4690B300E250AD /* Products */,
+				40D2BCC01A62F70368E227B1 /* Pods */,
+				1FDFDD5EC369BACD099853D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		EAC3D8671E4690B300E250AD /* Pic Post */ = {
 			isa = PBXGroup;
 			children = (
+				EAC3D87A1E4691DA00E250AD /* GoogleService-Info.plist */,
 				EAC3D8681E4690B300E250AD /* AppDelegate.swift */,
 				EAC3D86A1E4690B300E250AD /* ViewController.swift */,
 				EAC3D86C1E4690B300E250AD /* Main.storyboard */,
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC3D8771E4690B300E250AD /* Build configuration list for PBXNativeTarget "Pic Post" */;
 			buildPhases = (
+				4E80F67E5481F1BF253E3C5C /* [CP] Check Pods Manifest.lock */,
 				EAC3D8611E4690B300E250AD /* Sources */,
 				EAC3D8621E4690B300E250AD /* Frameworks */,
 				EAC3D8631E4690B300E250AD /* Resources */,
+				A105EB11A7A0A011CA97DF3B /* [CP] Embed Pods Frameworks */,
+				DA66DD55E2B663B460936E0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,12 +155,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC3D8731E4690B300E250AD /* LaunchScreen.storyboard in Resources */,
+				EAC3D87B1E4691DA00E250AD /* GoogleService-Info.plist in Resources */,
 				EAC3D8701E4690B300E250AD /* Assets.xcassets in Resources */,
 				EAC3D86E1E4690B300E250AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E80F67E5481F1BF253E3C5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A105EB11A7A0A011CA97DF3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pic Post/Pods-Pic Post-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA66DD55E2B663B460936E0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pic Post/Pods-Pic Post-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EAC3D8611E4690B300E250AD /* Sources */ = {
@@ -259,12 +338,13 @@
 		};
 		EAC3D8781E4690B300E250AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E0249BB0C581B046E2D76C /* Pods-Pic Post.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98B3NJN3T9;
 				INFOPLIST_FILE = "Pic Post/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Pic-Post";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.porkchopexpress.Pic-Post";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +352,13 @@
 		};
 		EAC3D8791E4690B300E250AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19F4D5FA0EC49F0ECC555B8 /* Pods-Pic Post.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98B3NJN3T9;
 				INFOPLIST_FILE = "Pic Post/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Pic-Post";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.porkchopexpress.Pic-Post";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
