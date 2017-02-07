@@ -45,12 +45,14 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
+  - SlideMenuControllerSwift (3.0.1)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - SlideMenuControllerSwift (~> 3.0)
 
 SPEC CHECKSUMS:
   Firebase: 53b2343db1ebfa3eb16bdb4318b8bb65360b2220
@@ -64,7 +66,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
+  SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
 
-PODFILE CHECKSUM: 66c24717b73b729cf1ad39cd7abfe3b979d9f236
+PODFILE CHECKSUM: 001d8664ee39a7fa53797cf799d23b98a69b3eae
 
 COCOAPODS: 1.1.1

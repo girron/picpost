@@ -10,6 +10,6 @@ target 'Pic Post' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-
+  pod 'SlideMenuControllerSwift', '~> 3.0'
 
 end
