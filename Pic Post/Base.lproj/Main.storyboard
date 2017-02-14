@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,11 +126,48 @@
                     <connections>
                         <outlet property="emailField" destination="8th-25-jTH" id="GnF-Oq-dCf"/>
                         <outlet property="pwdField" destination="6j4-1e-D6o" id="qrF-nU-lv8"/>
+                        <segue destination="oYQ-QN-Bia" kind="show" identifier="goToFeed" id="H4A-nQ-zTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="cY6-Ty-Ekm">
+            <objects>
+                <viewController id="oYQ-QN-Bia" customClass="FeedVC" customModule="Pic_Post" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9IK-Hw-ETx"/>
+                        <viewControllerLayoutGuide type="bottom" id="4DS-Rz-Zx0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WFF-lV-DzD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peC-BP-Cqp">
+                                <rect key="frame" x="157" y="318" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="singleTapped:" destination="oYQ-QN-Bia" eventType="touchUpInside" id="4Pf-wW-Rmh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="peC-BP-Cqp" firstAttribute="centerX" secondItem="WFF-lV-DzD" secondAttribute="centerX" id="jgZ-o2-ITw"/>
+                            <constraint firstItem="peC-BP-Cqp" firstAttribute="centerY" secondItem="WFF-lV-DzD" secondAttribute="centerY" id="lhi-yP-JvJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="bZ5-5g-2jR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5X-2j-ntX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="139"/>
         </scene>
     </scenes>
     <resources>
