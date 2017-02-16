@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3770CE145687FBB1A965F276 /* Pods_Pic_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941ED197178717C04C2E1FA8 /* Pods_Pic_Post.framework */; };
 		4F2AD0F31E53CA0500AB1348 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2AD0F21E53CA0500AB1348 /* FeedVC.swift */; };
+		4F43AEF21E56036800FED374 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43AEF11E56036800FED374 /* CircleView.swift */; };
 		4FA008731E493C44006A60AF /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA008721E493C44006A60AF /* FancyView.swift */; };
 		4FA008761E493D64006A60AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA008751E493D64006A60AF /* Constants.swift */; };
 		4FA008781E494518006A60AF /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA008771E494518006A60AF /* RoundBtn.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4F2AD0F21E53CA0500AB1348 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		4F43AEF11E56036800FED374 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		4FA008721E493C44006A60AF /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		4FA008751E493D64006A60AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4FA008771E494518006A60AF /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				4FA008771E494518006A60AF /* RoundBtn.swift */,
 				4FA008791E49521E006A60AF /* FancyField.swift */,
 				4FA0087B1E4953F1006A60AF /* FancyBtn.swift */,
+				4F43AEF11E56036800FED374 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F43AEF21E56036800FED374 /* CircleView.swift in Sources */,
 				4FA0087A1E49521E006A60AF /* FancyField.swift in Sources */,
 				EAC3D86B1E4690B300E250AD /* SignInVC.swift in Sources */,
 				4FA008781E494518006A60AF /* RoundBtn.swift in Sources */,
