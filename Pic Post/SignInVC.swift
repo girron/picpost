@@ -65,11 +65,11 @@ class SignInVC: UIViewController {
                 print("JAKE: Successfully authenticated with Firebase")
                 
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         })
-        
     }
     
     @IBAction func signInTapped(_ sender: Any) {
@@ -79,7 +79,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("JAKE: Email User authenticated with Firebase")
                     if let user = user {
-                    self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -89,7 +90,8 @@ class SignInVC: UIViewController {
                             print("JAKE: Successfully authenticate Firebase")
                             
                             if let user = user {
-                               self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -99,7 +101,8 @@ class SignInVC: UIViewController {
         
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: [String: String]) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keyChainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("JAKE: Data saved to keychain \(keyChainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)

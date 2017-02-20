@@ -10,6 +10,7 @@
 		3770CE145687FBB1A965F276 /* Pods_Pic_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941ED197178717C04C2E1FA8 /* Pods_Pic_Post.framework */; };
 		4F2AD0F31E53CA0500AB1348 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2AD0F21E53CA0500AB1348 /* FeedVC.swift */; };
 		4F43AEF21E56036800FED374 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43AEF11E56036800FED374 /* CircleView.swift */; };
+		4F43AEF51E5B8BB800FED374 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43AEF41E5B8BB800FED374 /* DataService.swift */; };
 		4FA008731E493C44006A60AF /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA008721E493C44006A60AF /* FancyView.swift */; };
 		4FA008761E493D64006A60AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA008751E493D64006A60AF /* Constants.swift */; };
 		4FA008781E494518006A60AF /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA008771E494518006A60AF /* RoundBtn.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		4F2AD0F21E53CA0500AB1348 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		4F43AEF11E56036800FED374 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		4F43AEF41E5B8BB800FED374 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4FA008721E493C44006A60AF /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		4FA008751E493D64006A60AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4FA008771E494518006A60AF /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4F43AEF31E5B8B9E00FED374 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F43AEF41E5B8BB800FED374 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		4FA008741E493D41006A60AF /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		EAC3D8671E4690B300E250AD /* Pic Post */ = {
 			isa = PBXGroup;
 			children = (
+				4F43AEF31E5B8B9E00FED374 /* Services */,
 				4FA008741E493D41006A60AF /* Util */,
 				EAC3D87C1E4694F500E250AD /* Model */,
 				EAC3D87E1E46950300E250AD /* Controller */,
@@ -277,6 +288,7 @@
 				EAC3D86B1E4690B300E250AD /* SignInVC.swift in Sources */,
 				4FA008781E494518006A60AF /* RoundBtn.swift in Sources */,
 				EAC3D8691E4690B300E250AD /* AppDelegate.swift in Sources */,
+				4F43AEF51E5B8BB800FED374 /* DataService.swift in Sources */,
 				4F2AD0F31E53CA0500AB1348 /* FeedVC.swift in Sources */,
 				4FA008731E493C44006A60AF /* FancyView.swift in Sources */,
 				4FA008761E493D64006A60AF /* Constants.swift in Sources */,
