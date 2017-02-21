@@ -181,13 +181,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="blL-FN-EHZ">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-Wd-HFf" customClass="CircleView" customModule="Pic_Post" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-Wd-HFf" customClass="CircleView" customModule="Pic_Post" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="iAZ-3q-TRS"/>
                                                     <constraint firstAttribute="width" constant="49" id="kze-HU-H6g"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="vgx-f5-DB0" appends="YES" id="m0z-aY-Neb"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feb-UJ-Vb6" customClass="FancyField" customModule="Pic_Post" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="12" width="209" height="25"/>
@@ -336,6 +340,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="x8P-Wd-HFf" id="4KQ-rE-Woj"/>
                         <outlet property="tableView" destination="SDx-fl-AN8" id="5pS-br-rau"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="bZ5-5g-2jR"/>
                     </connections>
@@ -344,6 +349,11 @@
                 <tapGestureRecognizer id="M5Z-4u-AVn">
                     <connections>
                         <action selector="signOutTapped:" destination="oYQ-QN-Bia" id="xWf-Yj-ZgN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vgx-f5-DB0">
+                    <connections>
+                        <action selector="addImageTapped:" destination="oYQ-QN-Bia" id="tp1-a8-27R"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
