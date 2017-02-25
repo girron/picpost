@@ -51,7 +51,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
     
@@ -145,7 +145,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     func captionAlert() {
         let captionAlert = UIAlertController(title: "Missing Caption", message: "Please enter a caption", preferredStyle: .alert)
-        captionAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = captionAlert.textFields![0] as UITextField
+            
+            self.captionField.text = firstTextField.text
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+        })
+        
+        captionAlert.addTextField { (textField: UITextField!) in
+            textField.placeholder = "Enter caption"
+        }
+        captionAlert.addAction(saveAction)
+        captionAlert.addAction(cancelAction)
+        //captionAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(captionAlert, animated: true, completion: nil)
     }
     
