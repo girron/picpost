@@ -20,7 +20,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,9 +51,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
         return posts.count
     }
     
@@ -64,10 +62,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             
             
-           if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
+            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
                 return cell
-           } else {
+            } else {
                 cell.configureCell(post: post)
             }
             return cell
@@ -78,6 +76,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
             imageSelected = true
@@ -90,14 +90,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func addImageTapped(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
-
+    
     @IBAction func postBtnTapped(_ sender: Any) {
+        
         guard let caption = captionField.text, caption != "" else {
+            captionAlert()
             print("JAKE: Caption must be entered")
             return
         }
         
         guard let img = imageAdd.image, imageSelected == true else {
+            imgAlert()
             print("JAKE: An image must be selected")
             return
         }
@@ -140,11 +143,23 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         tableView.reloadData()
     }
     
+    func captionAlert() {
+        let captionAlert = UIAlertController(title: "Missing Caption", message: "Please enter a caption", preferredStyle: .alert)
+        captionAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(captionAlert, animated: true, completion: nil)
+    }
+    
+    func imgAlert() {
+        let imageAlert = UIAlertController(title: "Missing Image", message: "Please select an image", preferredStyle: .alert)
+        imageAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(imageAlert, animated: true, completion: nil)
+    }
+    
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("JAKE: ID removed from keychain \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
- 
+    
 }
